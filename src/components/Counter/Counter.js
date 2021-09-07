@@ -14,29 +14,17 @@ const Counter = () => {
 
     return (
         <div className="counter-wrapper">
-            <div>
-                <button
-                    aria-label="Increment value"
-                    onClick={() => dispatch(increment())}
-                >
-                    Increment
-                </button>
-                <span>{count}</span>
-                <button
-                    aria-label="Decrement value"
-                    onClick={() => dispatch(decrement())}
-                >
-                    Decrement
-                </button>
-                <input
-                    type="text"
-                    value={value}
-                    onChange={e => setValue(Number(e.target.value))}
-                />
-                <button onClick={() => dispatch(incrementByAmount(value))}>
-                    incrementByAmount
-                </button>
-            </div>
+            <button onClick={() => dispatch(increment())}>Increment</button>
+            <span>{count}</span>
+            <button onClick={() => dispatch(decrement())}>Decrement</button>
+            <input
+                type="text"
+                value={value}
+                onChange={e => setValue(Number(e.target.value))}
+            />
+            <button onClick={() => dispatch(incrementByAmount(value))}>
+                incrementByAmount
+            </button>
         </div>
     );
 };
